@@ -1,10 +1,6 @@
 name: Weekly SBTET Fetcher
 on:
-  schedule:
-    # 12:37 UTC converts exactly to 6:07 PM IST EVERY SUNDAY
-    - cron: '37 1 * * 0'
-    # 03:12 UTC converts to 8:42 AM IST EVERY THURSDAY
-    - cron: '12 1 * * 4'
+  
   workflow_dispatch:
 
 jobs:
