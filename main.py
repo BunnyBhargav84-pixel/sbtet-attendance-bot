@@ -110,7 +110,7 @@ for student in students:
                 True_working_days = int(sbtet_working_days)
             
                 remaining_working_days = 90 - int(True_working_days)
-                required_present_days = 68 - int(present_days)
+                required_present_days = 68 - float(present_days)
                 chance_for_leave = remaining_working_days - required_present_days
                 if chance_for_leave < 0:
                     chance_for_leave = 0
