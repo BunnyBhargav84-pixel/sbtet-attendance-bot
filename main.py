@@ -109,8 +109,11 @@ for student in students:
                 sbtet_working_days = data["Table"][0]["WorkingDays"]
                 True_working_days = int(sbtet_working_days)
             
-                remaining_working_days = 90 - int(True_working_days)
-                required_present_days = 68 - float(present_days)
+                remaining_working_days = int(TOTAL_SEMESTER_WORKING_DAYS) - int(True_working_days)
+                if int(TOTAL_SEMESTER_WORKING_DAYS) >=90 and <180:
+                    required_present_days = 68 - float(present_days)
+                else:
+                    required_present_days = 136 - float(present_days)
                 chance_for_leave = remaining_working_days - required_present_days
                 if chance_for_leave < 0:
                     chance_for_leave = 0
